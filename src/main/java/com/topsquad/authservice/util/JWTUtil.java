@@ -1,6 +1,5 @@
 package com.topsquad.authservice.util;
 
-import com.topsquad.authservice.entity.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

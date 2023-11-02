@@ -31,7 +31,7 @@ public class UserDetail implements UserDetailsService {
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(),
                 user.getPassword_hash(),
-                new HashSet<GrantedAuthority>());
+                new HashSet<>());
     }
 
 }

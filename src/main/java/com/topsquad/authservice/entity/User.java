@@ -3,7 +3,6 @@ package com.topsquad.authservice.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity

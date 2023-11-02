@@ -1,6 +1,5 @@
 package com.topsquad.authservice.controller;
 
-import com.topsquad.authservice.model.AuthResponse;
 import com.topsquad.authservice.model.ChangePassRequest;
 import com.topsquad.authservice.model.LoginDto;
 import com.topsquad.authservice.model.RegisterDto;
@@ -27,7 +26,7 @@ public class AuthController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@RequestBody RegisterDto registerReq) throws Exception {
+    public ResponseEntity<?> registerUser(@RequestBody RegisterDto registerReq) {
         try {
             return new ResponseEntity<>(authService.signup(registerReq), HttpStatus.OK);
         } catch (Exception e){
@@ -36,7 +35,7 @@ public class AuthController {
     }
 
     @GetMapping("/whosOwner")
-    public ResponseEntity<?> getTokenOwnerID(@RequestParam String token) throws Exception {
+    public ResponseEntity<?> getTokenOwnerID(@RequestParam String token) {
         try {
             return new ResponseEntity<>(authService.getOwnerId(token).toString(), HttpStatus.OK);
         } catch (Exception e){
@@ -50,7 +49,7 @@ public class AuthController {
     }
 
     @PostMapping("/changePass")
-    public ResponseEntity<?> changePassword(@RequestBody ChangePassRequest request) throws Exception {
+    public ResponseEntity<?> changePassword(@RequestBody ChangePassRequest request) {
         try {
             return new ResponseEntity<>(authService.changePass(request), HttpStatus.OK);
         } catch (Exception e){
